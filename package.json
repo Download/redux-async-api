@@ -1,0 +1,62 @@
+{
+  "name": "redux-async-api",
+  "version": "0.1.0",
+  "description": "Async api for use with redux-apis",
+  "main": "lib/redux-async-api.min.js",
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  },
+  "scripts": {
+    "build-umd": "webpack --output-path lib --output-filename redux-async-api.umd.js --output-library-target umd \"./redux-async-api.jsx\" ",
+    "build-min": "webpack -p --output-path lib --output-filename redux-async-api.min.js --output-library-target umd \"./redux-async-api.jsx\" ",
+    "build": "npm run build-umd && npm run build-min",
+    "build-test": "webpack --output-path lib --output-filename redux-async-api.spec.js \"./redux-async-api.spec.jsx\" && mocha \"lib/redux-async-api.spec.js\" ",
+    "release": "npm run build && npm run build-test",
+    "test": "mocha --require babel-register \"src/**/*.spec.jsx\"",
+    "test-dev": "webpack-dev-server --output-path test --output-filename redux-async-api.spec.js \"mocha!./redux-async-api.spec.jsx\" --content-base test --port 8888"
+  },
+  "keywords": [
+    "redux",
+    "redux-apis",
+    "redux-async-api",
+    "async"
+  ],
+  "author": {
+    "name": "Stijn de Witt",
+    "email": "StijnDeWitt@hotmail.com",
+    "url": "http://StijnDeWitt.com"
+  },
+  "copyright": "Copyright 2016 by [Stijn de Witt](http://StijnDeWitt.com). Some rights reserved.",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/download/redux-async-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/download/redux-async-api/issues"
+  },
+  "homepage": "http://github.com/download/redux-async-api",
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-loader": "^6.2.1",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "mocha-loader": "^0.7.1",
+    "path": "^0.12.7",
+    "redux-apis": "^0.10.3",
+    "source-map-support": "^0.4.0",
+    "webpack": "^1.12.11",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "redux-apis": "^0.11.1"
+  }
+}
