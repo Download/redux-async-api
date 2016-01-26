@@ -15,7 +15,7 @@
     "build": "npm run build-umd && npm run build-min",
     "build-test": "webpack --output-path lib --output-filename redux-async-api.spec.js \"./redux-async-api.spec.jsx\" && mocha \"lib/redux-async-api.spec.js\" ",
     "release": "npm run build && npm run build-test",
-    "test": "mocha --require babel-register \"src/**/*.spec.jsx\"",
+    "test": "mocha --require src/test-helper.js \"src/**/*.spec.jsx\"",
     "test-dev": "webpack-dev-server --output-path test --output-filename redux-async-api.spec.js \"mocha!./redux-async-api.spec.jsx\" --content-base test --port 8888"
   },
   "keywords": [
