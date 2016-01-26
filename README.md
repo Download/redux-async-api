@@ -1,6 +1,6 @@
-![version](https://img.shields.io/npm/v/redux-async-api.svg) ![license](https://img.shields.io/npm/l/redux-async-api.svg) ![installs](https://img.shields.io/npm/dt/redux-async-api.svg) ![build](https://img.shields.io/travis/Download/redux-async-api.svg) ![mind BLOWN](https://img.shields.io/badge/mind-BLOWN-ff69b4.svg)
+﻿![version](https://img.shields.io/npm/v/redux-async-api.svg) ![license](https://img.shields.io/npm/l/redux-async-api.svg) ![installs](https://img.shields.io/npm/dt/redux-async-api.svg) ![build](https://img.shields.io/travis/Download/redux-async-api.svg) ![mind BLOWN](https://img.shields.io/badge/mind-BLOWN-ff69b4.svg)
 
-# redux-async-api <sup><sub>v0.1.0</sub></sup>
+# redux-async-api <sup><sub>v0.2.0</sub></sup>
 
 **Async api for use with [redux-apis](https://github.com/download/redux-apis)**
 
@@ -51,11 +51,11 @@ class MyAsync extends Async {
 
   run() {
     this.setBusy();
-	this.setResult('busy...');
+    this.setResult('busy...');
     return new Promise((resolve) => {
       setTimeout(() => {
         this.setDone();
-		this.setResult('Done!');
+        this.setResult('Done!');
         return resolve();
       }, 0);
     });
@@ -86,7 +86,7 @@ class MyAsync extends Api {
 
   constructor(state = MyAsync.INITIAL_STATE) {
     super(state);
-	this.async = link(this, new Async());
+    this.async = link(this, new Async());
     this.setHandler('SET_RESULT', (state, action) => ({...state, result:action.payload}));
   }
 
@@ -100,11 +100,11 @@ class MyAsync extends Api {
 
   run() {
     this.async.setBusy();
-	this.setResult('busy...');
+    this.setResult('busy...');
     return new Promise((resolve) => {
       setTimeout(() => {
         this.async.setDone();
-		this.setResult('Done!');
+        this.setResult('Done!');
         return resolve();
       }, 0);
     });
@@ -134,7 +134,7 @@ Constructive feedback most appreciated!
 
 
 ## Copyright
-� 2016, [Stijn de Witt](http://StijnDeWitt.com). Some rights reserved.
+© 2016, [Stijn de Witt](http://StijnDeWitt.com). Some rights reserved.
 
 
 ## License
