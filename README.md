@@ -1,6 +1,6 @@
 ﻿![version](https://img.shields.io/npm/v/redux-async-api.svg) ![license](https://img.shields.io/npm/l/redux-async-api.svg) ![installs](https://img.shields.io/npm/dt/redux-async-api.svg) ![build](https://img.shields.io/travis/Download/redux-async-api.svg) ![mind BLOWN](https://img.shields.io/badge/mind-BLOWN-ff69b4.svg)
 
-# redux-async-api <sup><sub>v0.2.0</sub></sup>
+# redux-async-api <sup><sub>v0.3.0</sub></sup>
 
 **Async api for use with [redux-apis](https://github.com/download/redux-apis)**
 
@@ -11,18 +11,15 @@ npm install --save redux-async-api
 ```
 
 ## Dependencies and imports
-redux-async-api depends on redux-apis, so import that as well
+redux-async-api peer-depends on redux-apis, so add a dependency to that as well.
 
 ```js
-import Api, { link } from 'redux-apis';
 import Async from 'redux-async-api';
 ```
 
 Or, using ES5 / `require`:
 
 ```js
-var Api = require('redux-apis').Api;
-var link = require('redux-apis').link;
 var Async = require('redux-async-api').Async;
 ```
 
