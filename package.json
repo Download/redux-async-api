@@ -1,6 +1,6 @@
 {
   "name": "redux-async-api",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Async api for use with redux-apis",
   "main": "lib/redux-async-api.min.js",
   "babel": {
@@ -10,6 +10,7 @@
     ]
   },
   "scripts": {
+    "postinstall": "npm install redux-apis",
     "build-umd": "webpack --output-path lib --output-filename redux-async-api.umd.js --output-library-target umd \"./redux-async-api.jsx\" ",
     "build-min": "webpack -p --output-path lib --output-filename redux-async-api.min.js --output-library-target umd \"./redux-async-api.jsx\" ",
     "build": "npm run build-umd && npm run build-min",
@@ -51,7 +52,6 @@
     "mocha": "^2.3.4",
     "mocha-loader": "^0.7.1",
     "path": "^0.12.7",
-    "redux-apis": "^0.12.2",
     "source-map-support": "^0.4.0",
     "webpack": "^1.12.11",
     "webpack-dev-server": "^1.14.1"
