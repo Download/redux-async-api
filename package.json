@@ -1,6 +1,6 @@
 {
   "name": "redux-async-api",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Async api for use with redux-apis",
   "main": "lib/redux-async-api.min.js",
   "babel": {

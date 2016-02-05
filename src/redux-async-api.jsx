@@ -19,7 +19,7 @@ export class Async extends Api {
 	pending() {return this.getState().async === Async.PENDING;}
 	busy() {return this.getState().async === Async.BUSY;}
 	done() {return this.getState().async === Async.DONE;}
-	error() {return this.getState().async instanceof Error && this.getState().async;}
+	error() {return (typeof this.getState().async == 'object') && this.getState().async;}
 
 	setBusy() {return this.dispatch(this.createAction(Async.BUSY)());}
 	setDone() {return this.dispatch(this.createAction(Async.DONE)());}

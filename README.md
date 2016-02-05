@@ -1,6 +1,6 @@
 ﻿![version](https://img.shields.io/npm/v/redux-async-api.svg) ![license](https://img.shields.io/npm/l/redux-async-api.svg) ![installs](https://img.shields.io/npm/dt/redux-async-api.svg) ![build](https://img.shields.io/travis/Download/redux-async-api.svg) ![mind BLOWN](https://img.shields.io/badge/mind-BLOWN-ff69b4.svg)
 
-# redux-async-api <sup><sub>v0.3.3</sub></sup>
+# redux-async-api <sup><sub>v0.3.4</sub></sup>
 
 **Async api for use with [redux-apis](https://github.com/download/redux-apis)**
 
@@ -126,7 +126,7 @@ promise.then(() => {
 
 ## Feedback, suggestions, questions, bugs
 Please visit the [issue tracker](https://github.com/download/redux-async-api/issues)
-for any of the above. Don't be afraid about being off-topc.
+for any of the above. Don't be afraid about being off-topic.
 Constructive feedback most appreciated!
 
 
