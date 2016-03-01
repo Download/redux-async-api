@@ -14,12 +14,12 @@ export class Async extends Api {
 		this.setHandler(Async.DONE, (state, action) => ({...state, async:Async.DONE}));
 		this.setHandler(Async.ERROR,(state, action) => ({...state, async:action.payload}));
 		this.setHandler(Async.PENDING, (state, action) => ({...state, async:Async.PENDING}));
-	}
 
-	pending() {return this.getState().async === Async.PENDING;}
-	busy() {return this.getState().async === Async.BUSY;}
-	done() {return this.getState().async === Async.DONE;}
-	error() {return (typeof this.getState().async == 'object') && this.getState().async;}
+		Object.defineProperty(this, 'pending', {enumerable:true, get:() => this.getState().async === Async.PENDING});
+		Object.defineProperty(this, 'busy', {enumerable:true, get:() => this.getState().async === Async.BUSY});
+		Object.defineProperty(this, 'done', {enumerable:true, get:() => this.getState().async === Async.DONE});
+		Object.defineProperty(this, 'error', {enumerable:true, get:() => (typeof this.getState().async == 'object') && this.getState().async});
+	}
 
 	setBusy() {return this.dispatch(this.createAction(Async.BUSY)());}
 	setDone() {return this.dispatch(this.createAction(Async.DONE)());}
