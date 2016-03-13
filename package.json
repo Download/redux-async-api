@@ -1,6 +1,6 @@
 {
   "name": "redux-async-api",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Async api for use with redux-apis 1.1.x and higher",
   "main": "lib/redux-async-api.min.js",
   "babel": {
@@ -56,6 +56,6 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-	"redux-apis": "^1.1.0"
+	"redux-apis": "^1.1.0||>=2.0.0-alpha.1"
   }
 }
