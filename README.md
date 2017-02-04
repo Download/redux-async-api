@@ -2,6 +2,8 @@
 
 # redux-async-api <sup><sub>v2.0.1</sub></sup>
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Download/redux-async-api.svg)](https://greenkeeper.io/)
+
 **Async api for use with [redux-apis](https://github.com/download/redux-apis) v1.1+ / v2-alpha**
 
 
